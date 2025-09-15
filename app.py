@@ -57,6 +57,8 @@ def on_copy_click(text):
 
 @st.dialog("Construisez votre requête")
 def filter_builder(data):
+    st.write("""On ne peut pas encore ajouter plusieurs filtre en même temps.<br>
+    Si on veut uniquement les tweets de X publiés entre mars 2015 et mars 2016, on crée un premier filtre avec "Auteur" comme paramètre => on valide => on crée un nouveau filtre avec la date.""")
     filtre = st.selectbox("Select a column", [x for x in data.columns], index= None)
 
     if filtre:
