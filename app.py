@@ -157,8 +157,6 @@ if 'filter_count' not in st.session_state:
 
 st.session_state.bdd = "CSV"
 uploaded_files = st.sidebar.file_uploader("Téléverser le fichier ros1_tweets.csv", key = "df_tweet", accept_multiple_files=False)
-uploaded_reply = st.sidebar.file_uploader("Téléverser le fichier join_reply.csv", key = "reply", accept_multiple_files=False)
-
 
 
 if uploaded_files is not None:
@@ -171,6 +169,8 @@ if uploaded_files is not None:
 
     uploaded_files.seek(0)
     df0 = pd.read_csv(uploaded_files, dtype = dic_id)
+    uploaded_reply = st.sidebar.file_uploader("Téléverser le fichier join_reply.csv", key = "reply", accept_multiple_files=False)
+    
     if uploaded_reply is not None:
         df_reply = pd.read_csv(uploaded_reply, sep=",", dtype =dic_id)
 
