@@ -140,8 +140,8 @@ def display_quote1(data, dreply):
             
             rep_id = data.reply_id.iloc[index]
             nom = dreply.user_screen_name.loc[dreply.id == rep_id].iloc[0]
-            st.write(f"__Le tweet de {auteur} est une réponse à {nom}__")
-            #st.write('__Reply to__ : ', dreply.user_screen_name.loc[dreply.id == rep_id].iloc[0])
+            st.write(f"__Le tweet de {auteur} est une réponse à")
+            st.write('__Reply to__ : ', dreply.user_screen_name.loc[dreply.id == rep_id].iloc[0])
             st.write('__Reply id__ : ', dreply.id.loc[dreply.id == rep_id].iloc[0])
             #st.write('__Reply status__ : ', data.User_status.loc[data.author == nom].iloc[0])
             st.write('__Date__ : ', dreply.local_time.loc[dreply.id == rep_id].iloc[0])
