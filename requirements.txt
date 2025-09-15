@@ -5,3 +5,4 @@ datetime
 emoji
 psycopg2-binary
 sqlalchemy
+clipboard
